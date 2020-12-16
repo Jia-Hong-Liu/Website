@@ -1,0 +1,101 @@
+<DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>J.M.T數學</title>
+        <link rel="stylesheet" href="Cover2.css">
+    </head>
+
+    <body>
+        <div class="Title">
+            <h1> <span class="nickname">j.m.t</span>高&nbsp中&nbsp數&nbsp學&nbsp教&nbsp室</h1>
+            <P class="home"><a href="HW2.html">回首頁</a></p>
+            <P id="diss"><a href="HW2.html">進入討論版(會員)</a></p>
+        </div>
+
+        <div class="container">
+            <div class="passport">
+                <form method="post" action="auth.php">
+                    <p class="center">會員登入</p>
+                    帳號: <input TYPE="text" name="account"><br> 密碼: <input TYPE="password" name="password"><br>
+                    <div id="BT">
+                        <input type="submit" value="登入" style="font-family: '標楷體'; font-size: 16px;">
+                        <span><input type="button" value="申請會員" onclick="self.location.href='form.html'" style="font-family: '標楷體'; font-size: 16px;"/></span>
+                    </div>
+                </form>
+            </div>
+            <div class="content">
+                <h2 class="blank">會員申請</h2>
+            </div>
+        </div>
+
+        <div class="container2">
+            <div class="content2">
+                <h3 class="center">【主題分類】</h3>
+                <ul class="unicode_list_image">
+                    <li><a class="right" href="math1.html" target="myframe">高一數學</a></li><br>
+                    <li><a class="right" href="math2.html" target="myframe">高二數學</a></li><br>
+                    <li><a class="right" href="exam.html" target="myframe">各校精選題</a></li><br>
+                    <li><a class="right" href="way.html" target="myframe">學習方法</a></li><br>
+                    <li><a class="right" href="story.html" target="myframe">數學小故事</a></li><br>
+                    <li><a class="right" href="discussion.html" target="myframe">筆記區</a></li>
+                </ul>
+            </div>
+
+            <form action="/01_input.php" method="post" name="formAdd" id="formAdd">
+                <table border="1" align="center" cellpadding="4">
+                    <tr>
+                        <th>欄位</th>
+                        <th>資料</th>
+                    </tr>
+                    <tr>
+                        <td>姓名</td>
+                        <td><input type="text" name="cName" id="cName" autocomplete="off"></td>
+                    </tr>
+                    <tr>
+                        <td>性別</td>
+                        <td>
+                            <input type="radio" name="cSex" id="radio" value="M" checked>男
+                            <input type="radio" name="cSex" id="radio" value="F">女
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>生日</td>
+                        <td><input type="text" name="cBirthday" id="cBirthday" autocomplete="off"></td>
+                    </tr>
+                    <tr>
+                        <td>電子郵件</td>
+                        <td><input type="text" name="cEmail" id="cEmail" autocomplete="off"></td>
+                    </tr>
+                    <tr>
+                        <td>電話</td>
+                        <td><input type="text" name="cPhone" id="cPhone" autocomplete="off"></td>
+                    </tr>
+                    <tr>
+                        <td>住址</td>
+                        <td><input name="cAddr" type="text" id="cAddr" size="40" autocomplete="off"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center">
+                            <input name="action" type="hidden" value="add">
+                            <input type="submit" name="button1" id="button1" value="新增資料">
+                            <input type="reset" name="button2" id="button2" value="重新填寫">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <footer class="author">
+            <div id="time">
+                <script>
+                    var Today = new Date();　
+                    var x = document.write("最近更新日期:" + Today.getFullYear() + "." + (Today.getMonth() + 1) + "." + Today.getDate());
+                </script>
+            </div>
+            <p><small>author:jayvgpluvi @版權所有，請勿抄襲</small></p>
+        </footer>
+    </body>
+
+    </html>

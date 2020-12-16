@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="computer.css">
+    <link rel="stylesheet" type="text/css" href="tablet.css" media="screen and (min-width:600px) and (max-width:1024px)">
+    <link rel="stylesheet" type="text/css" href="phone.css" media="screen and (max-width:600px)">
+    <script src="discussion.js"></script>
+</head>
+
+<body onkeydown="keyLogin();">
+    <div class="remind">
+        <h2>&nbsp&nbsp『人性化設計』</h2>
+        <ul>
+            <li>按下Enter即可輸入內容</li>
+            <li>按下Esc即可刪除內容</li>
+            <li>輸入資料後，會自動清除輸入欄位資料</li>
+            <li>表格內中英文會切換字體</li>
+            <li>透過輸入關鍵字即可刪除特定項目</li>
+        </ul>
+        <h2>&nbsp&nbsp『防呆設計』</h2>
+        <ul>
+            <li>若輸入關鍵字不存在，則會顯示【無此關鍵字】</li>
+            <li>若輸入值為空，則按任意鍵皆會顯示【不能為空】</li>
+            <li>表格寬度固定，文字超過會自動換行</li>
+        </ul>
+    </div>
+    <div id="note">
+        <!-- 用form的id存取值會跑到後端，要用input -->
+        <!-- <form id="word"> -->
+        <button id="enter" onclick="Add_words()">新增筆記</button>
+        <span><button id="Esc" onclick="delete_words()">刪除筆記</button></span>
+        <table border="1" id="T1">
+            <th>
+                Note
+            </th>
+            <tr>
+                <td>
+                    <ol id="myList"></ol>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id="textin">
+        <p>【此處輸入筆記，可依照順序記錄在左方】</p>
+        <input id="word2" type="text" name="name" autocomplete="off">
+    </div>
+</body>
+
+</html>
